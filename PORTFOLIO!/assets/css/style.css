@@ -1,0 +1,119 @@
+
+@font-face {
+  font-family: 'againstregular';
+  src: url(against\ regular.ttf)
+
+}
+:root {
+    --color-body: #b6cbce;
+    --color-heading: #ececec;
+    --color-base: #c0eb02;
+    --color-base2: rgb(12, 12, 12);
+    --color-brand: #cfe600;
+    --color-brand2: rgba(175, 219, 0, 0.788)
+    --fonthead: "againstregular";
+
+}body{
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    position: relative;
+}   
+html {
+  scroll-padding-top: 4.5rem;
+}
+
+.navbar-brand{
+  font-family: againstregular;
+}
+header.masthead {
+  padding-top: 10.5rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: #fff;
+  background-image: url("../images/bg-header.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+header.masthead .masthead-subheading {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+  font-family: againstregular;
+}
+header.masthead .masthead-heading {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  font-family: againstregular;
+}
+
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 17rem;
+    padding-bottom: 12.5rem;
+  }
+  header.masthead .masthead-subheading {
+    font-size: 2.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  header.masthead .masthead-heading {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+  }
+}
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #000000;
+  --bs-btn-border-color: #000000;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #000000;
+  --bs-btn-hover-border-color: #e4b200;
+  --bs-btn-focus-shadow-rgb: 255, 208, 38;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #000000;
+  --bs-btn-active-border-color: #bf9600;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #000000;
+  --bs-btn-disabled-border-color: #000000;
+}
+
+.page-section {
+  padding: 6rem 0;
+  background-color: #e6e6e6;
+}
+.page-section h2.section-heading, .page-section .section-heading.h2 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #000000;
+  font-family: againstregular;
+}
+.page-section h3.section-subheading, .page-section .section-subheading.h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin-bottom: 4rem;
+  color: #000000;
+}
+
+.pt2Services{
+  padding-top: 40px;
+}
+
+.bgColor {
+  transition: all 1s;
+  background-color: rgb(0, 0, 0);
+  color: #000000;
+  border-bottom: 1px solid rgb(48, 48, 48);
+}
