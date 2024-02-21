@@ -25,6 +25,10 @@ html {
 .navbar-brand{
   font-family: againstregular;
 }
+.navbar-brand img{
+  width: 40PX;
+  height: 40PX;
+}
 header.masthead {
   padding-top: 10.5rem;
   padding-bottom: 6rem;
@@ -41,7 +45,7 @@ header.masthead .masthead-subheading {
   font-style: italic;
   line-height: 1.5rem;
   margin-bottom: 25px;
-  font-family: againstregular;
+  font-family: 'Times New Roman', Times, serif;
 }
 header.masthead .masthead-heading {
   font-size: 3.25rem;
@@ -76,15 +80,25 @@ header.masthead .masthead-heading {
   --bs-btn-border-color: #000000;
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #000000;
-  --bs-btn-hover-border-color: #e4b200;
+  --bs-btn-hover-border-color: #e40000;
   --bs-btn-focus-shadow-rgb: 255, 208, 38;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: #000000;
-  --bs-btn-active-border-color: #bf9600;
+  --bs-btn-active-border-color: #bf0000;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #000000;
   --bs-btn-disabled-border-color: #000000;
+  transition: 1s;
+}
+.btn-primary:hover{
+  color: #ffffff;
+  text-shadow: 0 0 35px #ff1810;
+  transform: scale(1.1);
+  z-index: 2;
+}
+.btn-primary:hover::before{
+  box-shadow: 0 0 15px #ff1010;
 }
 
 .page-section {
@@ -120,14 +134,13 @@ header.masthead .masthead-heading {
   align-items: center;
   flex-wrap: wrap;
   padding: 40px;
-  background-color: #d3d0d0;
 }
 
 .card {
   position:relative;
   width: 320px;
   height: 450px;
-  margin: 30px;
+  margin: 50px;
   background-image: url(../images/card-img.png);
   border: none;
   border-radius: 20px;
@@ -139,6 +152,7 @@ header.masthead .masthead-heading {
   overflow: hidden;
   display: flex;
   align-items: flex-start;
+  transition: 1s;
 }
 .card::before {
   content: '';
@@ -147,7 +161,7 @@ header.masthead .masthead-heading {
   left: -40px;
   width: 100%;
   height: 120%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2));
+  background: linear-gradient(90deg, transparent, hwb(0 100% 0% / 0.2));
   transform: rotate(35deg);
   pointer-events: none;
   filter: blur(5px);
@@ -157,7 +171,7 @@ header.masthead .masthead-heading {
   position: relative;
   width: 140px;
   height: 120px;
-  background: #d3d0d0;
+  background: rgb(12, 12, 12);
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
   margin-left: 90px;
@@ -176,7 +190,7 @@ header.masthead .masthead-heading {
   height: 50px;
   background: transparent;
   border-top-right-radius: 50px;
-  box-shadow: 15px -15px 0 15px #d3d0d0;
+  box-shadow: 15px -15px 0 15px rgb(12, 12, 12);
 }
 .icon::after{
   content: '';
@@ -187,7 +201,7 @@ header.masthead .masthead-heading {
   height: 50px;
   background: transparent;
   border-top-left-radius: 50px;
-  box-shadow: -15px -15px 0 15px #d3d0d0;
+  box-shadow: -15px -15px 0 15px rgb(12, 12, 12);
 }
 
 .icon ion-icon{
@@ -195,6 +209,7 @@ header.masthead .masthead-heading {
   font-size: 6em;
   z-index: 1000;
   --ionicon-stroke-width: 24px;
+  color: #fff;
 }
 
 .content{
@@ -214,4 +229,47 @@ header.masthead .masthead-heading {
 .content p{
   color: #fff;
   line-height: 1.5em;
+}
+.containerservices{
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  background: url(../images/services-bg.png);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  
+}
+.text-center{
+  padding-top: 80px;
+  text-align: center !important;
+  box-sizing: border-box;
+  display: block;
+  color: #fff;
+}
+
+.text-center h1{
+  font-family: againstregular;
+  font-weight: 200px;
+}
+.text-center p{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.card:hover:before{
+    box-shadow: 0 0 15px #ff1010;
+    border: none;
+    
+    
+}
+.card:hover {
+    color: #ff1010;
+    text-shadow: 0 0 35px #ff1810;
+    transform: scale(1.1);
+    z-index: 2;
+    background: url(../images/hover\ card.png);
+    border: none;
+    
 }
