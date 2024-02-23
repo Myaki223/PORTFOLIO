@@ -34,7 +34,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../images/bg-header.png");
+  background-image: url("/static/images/bg-header.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -141,7 +141,7 @@ header.masthead .masthead-heading {
   width: 320px;
   height: 450px;
   margin: 50px;
-  background-image: url(../images/card-img.png);
+  background-image: url(/static/images/card-img.png);
   border: none;
   border-radius: 20px;
   border-bottom-left-radius: 160px;
@@ -235,7 +235,7 @@ header.masthead .masthead-heading {
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
-  background: url(../images/services-bg.png);
+  background: url(/static/images/services-bg.png);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -269,7 +269,19 @@ header.masthead .masthead-heading {
     text-shadow: 0 0 35px #ff1810;
     transform: scale(1.1);
     z-index: 2;
-    background: url(../images/hover\ card.png);
+    background: url(/static/images/hover\ card.png);
     border: none;
     
 }
+
+.modal-content{
+  background-image: url(/static/images/services-bg.png);
+
+}
+
+
+.container-aboutme{
+  width: 100%;
+  margin-left: 150px;
+}
+
