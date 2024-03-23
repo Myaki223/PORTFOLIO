@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qrishun Amik Graphic Designer</title>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/aos.css">
     <link rel="stylesheet" href="/static/css/line-awesome.min.css">
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/hover.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -26,8 +27,8 @@
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="#review">Review</a></li>
+                    <li class="nav-item"><a class="nav-link" href=""  data-bs-toggle="modal" data-bs-target="#contact">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <i class="fa-solid fa-user-tie"></i>
                         </a>
@@ -43,59 +44,123 @@
         <div class="modal-dialog">
             <div class="modal-content text-center">
                 <div class="modal-body" >
-                    <div class="container-fluid" style="display: block; margin: 0px auto;">
-                        <img src="/static/images/PM1.jpg" alt="User" class="img-fluid circle">
-                        <br><br>
-                        <form method="POST">
-                            {% csrf_token %}
-                        <input type="text" class="textbardesign" placeholder="Username">
-                        <div>
-                            {{ form.username }}
-                        </div>
-                        <br><br>
-                        <input type="text" class="textbardesign" placeholder="Password">
-                        <div>
-                            {{ form.password }}
-                        </div>
-                    </form>
+                    
+        <div class="container-login">
+            <div class="row justify-content-center">
+              <div class="col-md-6 login-container">
+                <form>
+                  <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control hvr-grow" id="username" placeholder="Enter username">
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control hvr-grow" id="password" placeholder="Enter password">
+                  </div>
+                  <br>
+                  <div class="buttonlogin">
+                  <button type="submit" class="btn btn-primary btn-block btn-login">Login</button>
+                </div>
+                </form>
+              </div>
+            </div>
+          </div>
                     </div>
                 </div>  
-                <div class="footer" style="padding-bottom: 80px;">
-                    <button type="button" class="btn btn-primary">LOGIN</button>
-                </div>
             </div>
         </div>
     </div>
+</form>
 <!-- END LOGIN -->
-<header class="masthead">
-    <div class="container">
+<header class="masthead" >
+    <div class="container" data-aos="fade-up">
         <div class="masthead-heading ">Welcome To My Portfolio</div>
         <div class="masthead-subheading">I'm Qrishun Feb T. Amik</div>
-        <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+        <a class="btn btn-primary btn-xl text-uppercase" href="#about">Tell Me More</a>
     </div>
 </header>
 <!-- ABOUT ME -->
-<section class="about">
-<div class="container-aboutme">
-    <div class="name"><h1>Qrishun Feb T. Amik</h1></div>
-    <div class="email">qrishunamik55@gmail.com</div>
-    <div class="contactnumber">09362560869</div>
-    <div class="description">Hello po</div>
+ <section class="page-section" id="about">
+
+    <div class="container">
+        <div class="text-design">
+        <div class="row">
+            <!-- Image column -->
+            <div class="col-md-6" data-aos="fade-right" data-aos-delay="100" data-aos-duration="2000">
+             <img src="/static/images/Person.png" alt="" >
+             </div>
+            <div class="col-md-6" data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000">
+            <h1>Hi I'm Qrishun Feb T. Amik</h1>
+            <h2>a Graphic Designer</h2>
+            <p>
+                I am Qrishun Feb T. Amik, a graduating student from Western Mindanao State University with a focus on Information Technology. With experience in graphic design, photography, and UI/UX development, I bring a diverse skill set to the table. Proficient in Adobe Photoshop and Illustrator, I blend creativity with technical expertise, offering valuable contributions across projects and paving the way for innovation and growth opportunities in professional settings.</p>
+        </div>
+    </div>
 </div>
-</section>
+    </div>
+
+
+                <div class="text-center"data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000">
+                    <h2 class="section-heading text-uppercase">Education</h2>
+                    <h3 class="section-subheading text-muted">Education section: Degrees earned, courses completed,</h3>
+                </div>
+                <ul class="timeline">
+                    <li data-aos="fade-right">
+                        <div class="timeline-image hvr-shrink"><img class="rounded-circle img-fluid" src="/static/images/pilar-college.png" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2009-2011</h4>
+                                <h4 class="subheading">High School</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted" data-aos="fade-left">
+                        <div class="timeline-image hvr-shrink"><img class="rounded-circle img-fluid" src="/static/images/pilar-college.png" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>March 2011</h4>
+                                <h4 class="subheading">Senior Highschool</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                        </div>
+                    </li>
+                    <li data-aos="fade-right">
+                        <div class="timeline-image hvr-shrink"><img class="rounded-circle img-fluid" src="/static/images/pilar-college.png" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2009-2011</h4>
+                                <h4 class="subheading">College</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted" data-aos="fade-left">
+                        <div class="timeline-image hvr-shrink"><img class="rounded-circle img-fluid" src="/static/images/pilar-college.png" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>March 2011</h4>
+                                <h4 class="subheading">Certificate</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                        </div>
+                    </li>
+                </ul>
+
+        </section>
 
 <!-- END ABOUT ME -->
 
 <!-- SERVICES -->
     <section class="services" id="services">
         <div class="containerservices">
-            <div class="text-center">
+            <div class="text-center" data-aos="fade-up">
                 <h1>What do i do?</h1>
                 <p>These are the things i do! click to see more!</p>
             </div>
             <div class="containercard">
 
-                <div class="card">
+                <div class="card-services "data-aos="fade-up" data-bs-toggle="modal" data-bs-target="#viewproject1">
                     <div class="icon">
                         <ion-icon name="logo-web-component"></ion-icon>
                     </div>
@@ -108,7 +173,7 @@
                 </div>
 
 
-                <div class="card">
+                <div class="card-services" data-aos="fade-up" data-bs-toggle="modal" data-bs-target="#viewproject2">
                     <div class="icon">
                         <ion-icon name="images-outline"></ion-icon>
                     </div>
@@ -121,7 +186,7 @@
                 </div>
 
 
-                <div class="card">
+                <div class="card-services" data-aos="fade-up" data-bs-toggle="modal" data-bs-target="#viewproject3">
                     <div class="icon">
                         <ion-icon name="camera-outline">
                         </ion-icon>
@@ -137,12 +202,255 @@
             </div>
         </div>
     </section>
+
+<!-- REVIEW -->
+<section class="services" id="review">
+    <div class="containerreview">
+        <div class="row">
+        <div class="text-center" data-aos="fade-up">
+            <h1>Review</h1>
+            <p>These are the things i do! click to see more!</p>
+        </div>
+      
+        <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card 1 Title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Second row -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card 2 Title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Third row -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card 3 Title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+
+
+   
+      <div class="modal fade " id="contact" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+          <div class="modal-content modal-xl contact-body">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 Contact-title" id="exampleModalLabel">Contact</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+      
+      
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label hvr-grow">Name:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="message-text" class="col-form-label hvr-grow">Message:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                  </div>
+                </form>
+              </div>
+      
+      
+      
+            </div>
+            <div class="modal-footer contact-footer">
+              <button type="button" class="btn btn-primary">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="viewproject1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">UI/UX Designs</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+      
+      
+            <div class="container text-center">
+              <div class="row row-cols-3">
+      
+      
+      
+            <div class="modal-body hvr-shrink">
+              <div class="mb-4">
+                <div class="card">
+                  <img src="/static/images/Project1.png" class="card-img-top" alt="Project 1">
+                  <div class="card-body">
+                    <h5 class="card-title">Graphic Design</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+             
+            <div class="modal-body hvr-shrink">
+                <div class="mb-4">
+                  <div class="card">
+                    <img src="/static/images/Project1.png" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                      <h5 class="card-title">Graphic Design</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             
+              <div class="modal-body hvr-shrink">
+                <div class="mb-4">
+                  <div class="card">
+                    <img src="/static/images/Project1.png" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                      <h5 class="card-title">Graphic Design</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      
+
+      <div class="modal fade" id="viewproject2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Graphic Designs</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+      
+      
+            <div class="container text-center">
+              <div class="row row-cols-3">
+      
+      
+      
+            <div class="modal-body hvr-shrink">
+              <div class="mb-4">
+                <div class="card">
+                  <img src="/static/images/Project1.png" class="card-img-top" alt="Project 1">
+                  <div class="card-body">
+                    <h5 class="card-title">Graphic Design</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="modal-body hvr-shrink">
+              <div class="mb-4">
+                <div class="card">
+                  <img src="/static/images/Project1.png" class="card-img-top" alt="Project 1">
+                  <div class="card-body">
+                    <h5 class="card-title">Graphic Design</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="modal-body hvr-shrink">
+              <div class="mb-4">
+                <div class="card">
+                  <img src="/static/images/Project1.png" class="card-img-top" alt="Project 1">
+                  <div class="card-body">
+                    <h5 class="card-title">Graphic Design</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+
+       <div class="modal fade" id="viewproject3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Photography</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+      
+      
+            <div class="container text-center">
+              <div class="row row-cols-3">
+      
+      
+      
+            <div class="modal-body hvr-shrink">
+              <div class="mb-4">
+                <div class="card">
+                  <img src="/static/images/Project1.png" class="card-img-top" alt="Project 1">
+                  <div class="card-body">
+                    <h5 class="card-title">Graphic Design</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="modal-body hvr-shrink">
+              <div class="mb-4">
+                <div class="card">
+                  <img src="/static/images/Project1.png" class="card-img-top" alt="Project 1">
+                  <div class="card-body">
+                    <h5 class="card-title">Graphic Design</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="modal-body hvr-shrink">
+              <div class="mb-4">
+                <div class="card">
+                  <img src="/static/images/Project1.png" class="card-img-top" alt="Project 1">
+                  <div class="card-body">
+                    <h5 class="card-title">Graphic Design</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      
     <!-- END SERVICES -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="/static/js/bootstrap.bundle.min.js"></script>
     <script src="/static/js/aos.js"></script>
     <script src="/static/js/main.js"></script>
+    <script>
+        AOS.init();
+      </script>
 
 </body>
 
